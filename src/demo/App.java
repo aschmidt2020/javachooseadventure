@@ -34,7 +34,7 @@ public class App {
 		String settingString = getRandomItem(settings);
 		String weaponString = getRandomItem(weapons);
 		String villainString = getRandomItem(villains);
-//		
+	
 //		add to array list and print each value
 		ArrayList<String> myAdventure = new ArrayList<String>();
 		myAdventure.add(settingString);
@@ -49,12 +49,12 @@ public class App {
 //		while loop for confirming adventure
 		boolean confirmed = false;
 		while(confirmed == false) {
-			System.out.println("What would you like to change about your adventure? 0-Nothing, confirm!, 1-Setting, 2-Weapon, 3-Villain");
+			System.out.println("What would you like to change about your adventure? 0-Nothing, complete!, 1-Setting, 2-Weapon, 3-Villain");
 			String response = sc.nextLine();
 			switch(response) {
 				case "0":
-					System.out.println("Confirmed!" + newLineString +
-							"Your adventure is..." + newLineString + 
+					System.out.println("Complete!" + newLineString +
+							"Your adventure was..." + newLineString + 
 							"Setting: " + myAdventure.get(0) + newLineString + 
 							"Weapon: " + myAdventure.get(1) + newLineString + 
 							"Villain: " + myAdventure.get(2));
