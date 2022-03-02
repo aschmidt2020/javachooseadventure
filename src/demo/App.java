@@ -50,29 +50,30 @@ public class App {
 		boolean confirmed = false;
 		while(confirmed == false) {
 			System.out.println("What would you like to change about your adventure? 0-Nothing, complete!, 1-Setting, 2-Weapon, 3-Villain");
-			String response = sc.nextLine();
+			//String response = sc.nextLine(); example for grabbing user input of string
+			int response = sc.nextInt();
 			switch(response) {
-				case "0":
-					System.out.println("Complete!" + newLineString +
+				case 0:
+					System.out.println("Completed!" + newLineString +
 							"Your adventure was..." + newLineString + 
 							"Setting: " + myAdventure.get(0) + newLineString + 
 							"Weapon: " + myAdventure.get(1) + newLineString + 
 							"Villain: " + myAdventure.get(2));
 					confirmed = true;
 					break;
-				case "1":
+				case 1:
 					String oldSettingString = myAdventure.get(0);
 					String newSettingString = getNewRandomItemString(settings, oldSettingString);
 					myAdventure.set(0, newSettingString);
 					System.out.println("Prev setting = " + oldSettingString + newLineString + "New setting = " + newSettingString);
 					break;
-				case "2":
+				case 2:
 					String oldWeaponString = myAdventure.get(1);
 					String newWeaponString = getNewRandomItemString(weapons, oldWeaponString);
 					myAdventure.set(1, newWeaponString);
 					System.out.println("Prev weapon = " + oldWeaponString + newLineString + "New weapon = " + newWeaponString);
 					break;
-				case "3":
+				case 3:
 					String oldVillainString = myAdventure.get(2);
 					String newVillainString = getNewRandomItemString(villains, oldVillainString);
 					myAdventure.set(2, newVillainString);
